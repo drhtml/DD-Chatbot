@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dignitas Digital Chatbot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="chatbot-container"> 
+        <div class="chatbot-header">
+            <div class="bot-avatar">
+                <img src="https://www.dignitasdigital.com/wp-content/uploads/2021/01/DD-Logo_03.jpg" alt="Dignitas Digital Logo">
+            </div>
+            <div class="header-info">
+                <h3>Dignitas Digital Virtual Assistant</h3>
+                <!-- <p class="bot-description">I can assist you with information about Dignitas Digital, our services, expertise, and how we can support your agency and business needs.</p> -->
+                <p class="status">Online</p>
+            </div>
+            <button class="close-btn" id="closeBtn" aria-label="Close chatbot">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="logo-intro">
+                <div class="intro-logo">
+                    <img src="https://www.dignitasdigital.com/wp-content/uploads/2021/01/DD-Logo_03.jpg" alt="Dignitas Digital Logo">
+                </div>
+                <div class="intro-content">
+                    <h2>Welcome to Dignitas Digital</h2>
+                    <p>Your trusted partner in digital transformation and business growth. I'm here to help you discover how our expertise can elevate your agency and business to new heights.</p>
+                    <div class="intro-features">
+                        <div class="feature">
+                            <i class="fas fa-rocket"></i>
+                            <span>Digital Strategy</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Business Growth</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <span>Agency Support</span>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="feedback-buttons">
+                    <button class="feedback-btn like-btn" data-type="like" title="This response was helpful">
+                        <i class="fas fa-thumbs-up"></i>
+                        <span>Helpful</span>
+                    </button>
+                    <button class="feedback-btn dislike-btn" data-type="dislike" title="This response could be improved">
+                        <i class="fas fa-thumbs-down"></i>
+                        <span>Not Helpful</span>
+                    </button>
+                </div>-->
+            </div>
+            
+            <!---<div class="message bot-message">
+                <div class="message-avatar">
+                    <img src="https://www.dignitasdigital.com/wp-content/uploads/2021/01/DD-Logo_03.jpg" alt="Dignitas Digital Logo">
+                </div>
+                <div class="message-content">
+                    <p>Hello! I'm your AI assistant. How can I help you today?</p>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>-->
+            
+            <div class="typing-indicator" id="typingIndicator">
+                <div class="message-avatar">
+                    <img src="https://www.dignitasdigital.com/wp-content/uploads/2021/01/DD-Logo_03.jpg" alt="Dignitas Digital Logo">
+                </div>
+                <div class="typing-bubbles">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <div class="input-wrapper">
+                <input type="text" id="messageInput" placeholder="Type your message here..." maxlength="500" aria-label="Message input">
+                <button class="send-btn" id="sendBtn" title="Send message" aria-label="Send message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="chatbot-toggle" id="chatbotToggle" aria-label="Open chatbot">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
